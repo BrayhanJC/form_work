@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+		<!-- Top menu Form  -->
+		<menuitem
+			id="form_menu_root"
+			name="Formularios"
+			sequence="3"/>
+
+
+		<menuitem
+			id="form_menu_root_"
+			name="Formularios"
+			parent="form_menu_root"
+			sequence="1"/>
+
+			<menuitem
+				id="acta_kick_off"
+				name="Acta Kick off 2019"
+				parent="form_menu_root_"
+				action="form_one_action"/>
+
+			<menuitem
+				id="acta_entrega_obra"
+				name="Entrega Obra"
+				parent="form_menu_root_"
+				action="form_final_work_action"/>
+
+</odoo>

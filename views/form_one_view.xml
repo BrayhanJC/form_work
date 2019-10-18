@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="form_one_view_form" model="ir.ui.view">
+		<field name="name">form.one.form</field>
+		<field name="model">form.one</field>
+		<field name="arch" type="xml">
+
+			
+
+			<form>
+
+				<link rel="stylesheet" href="/form_work/static/src/css/style.css"/>
+
+				<div class="row fadeInDown">
+					<div class="col-3">
+						<div class="image_content">
+							<field name="field_binary_logo" widget='image'/>
+						</div>
+					</div>
+					<div class="col-9">
+						<h1>ACTA</h1>
+					</div>
+				</div>
+
+				<div class="row fadeInDown">
+					<div class="col-2">
+						<span class="letter-bold"> FECHA</span>
+					</div>
+					<div class="col-4">
+						<field name="date_act"/>
+					</div>
+					<div class="col-2">
+						<span class="letter-bold"> LUGAR</span>
+					</div>
+					<div class="col-4">
+						<field name="space"/>
+					</div>
+				</div>
+
+				<div class="row fadeInDown">
+					<div class="col-3">
+						<span class="letter-bold">NOMBRE DE LA REUNIÓN</span>
+					</div>
+					<div class="col-9">
+						<field name="name_meet"/>
+					</div>
+				</div>
+
+				<div class="row fadeInDown">
+					<div class="col-12-color">
+						<span class="letter-bold">OBJETIVO / TEMA PRINCIPAL</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<field name="theme_main"/>
+					</div>
+				</div>
+
+				<div class="row fadeInDown">
+					<div class="col-2">
+						<span class="letter-bold">HORA DE INICIO</span>
+					</div>
+					<div class="col-4">
+						<field name="hour_begin"/>
+					</div>
+					<div class="col-2">
+						<span class="letter-bold">HORA FINAL</span>
+					</div>
+					<div class="col-4">
+						<field name="hour_end"/>
+					</div>
+				</div>
+				
+				<div class="row fadeInDown">
+					<div class="col-12-color">
+						<span class="letter-bold">ASISTENTES (A) / INVITADOS (I)</span>
+					</div>
+				</div>
+				<div class="row fadeInDown">
+					<div class="col-12">
+						<field name="attendeens_ids"/>
+					</div>
+				</div>
+
+				<div class="row fadeInDown">
+					<div class="col-12-color">
+
+					</div>
+				</div>
+				<div class="row fadeInDown">
+					<div class="col-12">
+						<ol class="letter-justify">
+							<li>Se hizo la presentación de los alcances del proyecto tanto en diseño de los subsistemas: Electrico normal, regulado, seguridad, CCTV, control de acceso-Intrusion, infraestructura de deteccion de incendios. Estos mismos item seran para ejecución.</li>
+							<li> Inicio de obra 26 de abirl terminación 30junio, entrega de data confor 10 de Abril.</li>
+							<li>ITT se encargara de la instalación de cableado y equipos electricos y por medio de los canales certificados se contratara ya sea ITT o Arquint para que sean ellos configuren todo el sistema.</li>
+							<li>Es importante que dentro del proceso de diseño involucre el mayor numero de colaboradores de ITT para de esta forma compartir la experiencia y buenas practicas que fabrica Schneider va a aplicar en este sub proyecto estrella.</li>
+							<li> El supervisor debe ser alguien que tenga buena experiencia en el manejo de este tipo de clientes de parte de Leidy que se sugiere que sea Don Jesus.</li>
+							<li>Para los comites siempre debe estar el supervisor y alguien de diseño que tenga buen manejo con el cliente y sepa hablar en publico.</li>
+							<li>La obra debe tener siso permanente el apoyo de servicios desde el comienzo para que tengan conocimiento del proyecto.</li>
+						</ol>
+					</div>
+
+					<div class="col-3">
+					
+					</div>
+					<div class="col-9">
+						<h1>ACTA - COMPROMISOS</h1>
+					</div>
+				</div>
+
+
+
+				<div class="row fadeInDown">
+					<div class="col-12-color">
+						<span class="letter-bold">TAREAS Y COMPROMISOS</span>
+					</div>
+					<div class="col-12">
+						<field name="commitment_ids"/>
+					</div>
+				</div>
+
+
+
+
+				<div class="row fadeInDown">
+
+					<div class="col-12-color">
+						<span class="letter-bold">PRÓXIMA REUNIÓN</span>
+					</div>
+
+					<div class="col-2">
+						<span class="letter-bold">FECHA DE REUNIÓN</span>
+					</div>
+					<div class="col-4">
+						<field name="date_meet"/>
+					</div>
+					<div class="col-2">
+						<span class="letter-bold">DURACIÓN</span>
+					</div>
+					<div class="col-4">
+						<field name="duration"/>
+					</div>
+
+					<div class="col-2">
+						<span class="letter-bold">TEMAS RELEVANTES</span>
+					</div>
+					<div class="col-4">
+						<field name="relevant_themes"/>
+					</div>
+					<div class="col-2">
+						<span class="letter-bold">INVITADOS</span>
+					</div>
+					<div class="col-4">
+						
+					</div>
+
+					<div class="col-6-color">
+						<span class="letter-bold">CARGO DE LA PERSONA QUE CONVOCA LA REUNION</span>
+					</div>
+					<div class="col-6-color">
+						<span class="letter-bold">FIRMA</span>
+					</div>
+					<div class="col-6">
+						<group>
+							<field name="job_id"/>
+						</group>
+					</div>
+					<div class="col-6">
+						<group>
+							<field name="digital_signature" widget="signature"/>
+						</group>
+					</div>
+
+				</div>
+
+
+			</form>
+
+		</field>
+	</record>
+
+
+	<record id="form_one_view_tree" model="ir.ui.view">
+		<field name="name">form.one.tree</field>
+		<field name="model">form.one</field>
+		<field name="arch" type="xml">
+
+			<tree>
+				<field name="name"/>
+				<field name="date_act"/>
+				
+			</tree>
+
+		</field>
+	</record>
+
+	<record id="form_one_action" model="ir.actions.act_window">
+		<field name="name">Acta Kick off</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">form.one</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+		  <p class="o_view_nocontent_smiling_face">
+			Crear una nueva Acta
+		  </p>
+		</field>
+	</record>
+
+
+
+</odoo>

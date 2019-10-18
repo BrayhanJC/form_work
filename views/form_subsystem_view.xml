@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="form_subsystem_view_form" model="ir.ui.view">
+		<field name="name">form.subsystem.form</field>
+		<field name="model">form.subsystem</field>
+		<field name="arch" type="xml">
+
+			<form>
+
+				<group col="2">
+					<field name="name"/>
+				</group>
+
+				<group col="4">
+					<field name="apply_name"/>
+					<field name="date_current"/>
+				</group>
+
+			</form>
+
+		</field>
+	</record>
+
+
+	<record id="form_subsystem_view_tree" model="ir.ui.view">
+		<field name="name">form.subsystem.tree</field>
+		<field name="model">form.subsystem</field>
+		<field name="arch" type="xml">
+
+			<tree>
+				<field name="number_sequence"/>
+				<field name="name"/>
+				<field name="apply_name"/>
+				<field name="date_current"/>
+			</tree>
+
+		</field>
+	</record>
+
+
+
+
+</odoo>

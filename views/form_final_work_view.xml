@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="form_final_work_view_form" model="ir.ui.view">
+		<field name="name">form.final_work.form</field>
+		<field name="model">form.final_work</field>
+		<field name="arch" type="xml">
+
+			<form>
+
+				<link rel="stylesheet" href="/form_work/static/src/css/style_form_final_work.css"/>
+
+				<div class="row fadeInDown">
+					<div class="col-9">
+						<span class="letter-bold"> ACTA FINAL DE OBRA (ENTREGA DE OBRA)</span>
+						<field name="name" style="width: 40%%; margin-left: 10px;" readonly="1"/>
+					</div>
+					<div class="col-3">
+						<span class="letter-bold">VERSIÓN: GP-01</span>
+					</div>
+					<br/>
+					<div class="col-3">
+						<span class="letter-bold">FECHA</span>
+						<field name="date_current"/>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-12-gray">
+						<span class="letter-bold">INFORMACIÓN GENERAL</span>
+					</div>
+
+					<div class="col-2">
+						<span class="letter-bold">OBRA / PROYECTO</span>
+					</div>
+					<div class="col-4">
+						
+					</div>
+					<div class="col-2">
+						<span class="letter-bold">TIPO PROYECTO</span>
+					</div>
+					<div class="col-4">
+						<group>
+							<field name="project_id" nolabel="1" style="width: 80%%"/>
+						</group>
+					</div>
+
+
+
+					<div class="col-2">
+						<span class="letter-bold">SPONSOR</span>
+					</div>
+					<div class="col-4">
+						<!-- <field name=""/> -->
+					</div>
+					<div class="col-2">
+						<span class="letter-bold">COOR. DE PROYECTO</span>
+					</div>
+					<div class="col-4">
+						<field name="coordinator_id" style="width: 80%%"/>
+					</div>
+
+
+
+					<div class="col-2">
+						<span class="letter-bold">CONTACTO BACKUP</span>
+					</div>
+					<div class="col-4">
+						<!-- <field name=""/>. -->
+					</div>
+					<div class="col-2">
+						<span class="letter-bold">ASESOR COMERCIAL</span>
+					</div>
+					<div class="col-4">
+						<field name="adviser_id" style="width: 80%%"/>
+					</div>
+
+
+
+					<div class="col-2">
+						<span class="letter-bold">CLIENTE</span>
+					</div>
+					<div class="col-4">
+						<field name="partner_id" style="width: 80%%"/>
+					</div>
+					<div class="col-2">
+						<span class="letter-bold">CLIENTE FINAL</span>
+					</div>
+					<div class="col-4">
+				
+					</div>
+
+
+
+					<div class="col-2">
+						<span class="letter-bold">SEDE</span>
+					</div>
+					<div class="col-4">
+						<field name="sede_partner" style="width: 80%%"/>
+					</div>
+					<div class="col-2">
+						<span class="letter-bold">SEDE FINAL</span>
+					</div>
+					<div class="col-4">
+				
+					</div>
+
+
+
+					<div class="col-2">
+						<span class="letter-bold">RESIDENTE</span>
+					</div>
+					<div class="col-4">
+						<field name="resident_id" style="width: 80%%"/>
+					</div>
+					<div class="col-2">
+						<span class="letter-bold">TÉCNICO LIDER</span>
+					</div>
+					<div class="col-4">
+				
+					</div>
+
+
+
+					<div class="col-12-gray">
+						<span class="letter-bold">DESARROLLO DEL ACTA</span>
+					</div>
+
+					<div class="col-12-green">
+						<span class="letter-bold">RESULTADOS Y ENTREGABLES</span>
+					</div>
+
+					<div class="col-12">
+						<span class="letter-bold">Por este medio la presente acta se da por concluido el proyecto en mención, bajo las siguientes condiciones y entregables autorizados:</span>
+					</div>
+
+
+					<div class="col-12-green">
+						<span class="letter-bold">Partes y autorizaciones</span>
+					</div>
+
+
+					<div class="col-12">
+						<span class="letter-bold">Se reunieron las personas relacionadas a continuación, con el fin realizar la entrega formal del proyecto en mención:</span>
+					</div>		
+
+
+
+					<div class="col-12">
+						<field name="subsystem_ids"/>
+					</div>	
+
+					<div class="col-12">
+						<field name="comments" placeholder="Observaciones y comentarios:"/>
+					</div>	
+
+
+
+
+
+
+
+
+					<div class="col-12">
+						<field name="attendeens_ids">
+							<form>
+								<group col="2" colspan="2">
+									<div class="oe_title">
+										<h1>
+											<field name="name" default_focus="1" placeholder="Name" style="width: 90%%"/>
+										</h1>
+									</div>
+								</group>
+
+								<group col="4">
+									<field name="job_id" string="CARGO"/>
+									<field name="company_id"/>
+								</group>
+
+							</form>
+							<tree>
+								<field name="number_sequence"/>
+								<field name="name"/>
+								<field name="job_id" string="CARGO"/>
+								<field name="company_id"/>								
+							</tree>						
+						</field>
+					</div>
+
+					<div class="col-12">
+						Para constancia se firma la presente acta en la ciudad de  <field name="res_city_id" style="width: 8%%; margin-left: 10px;"/> a los <field name="days" style="width: 8%%; margin-left: 10px;"/> días del mes de <field name="month" style="width: 8%%; margin-left: 10px;"/> de <field name="year" style="width: 8%%; margin-left: 10px;"/>.
+					</div>
+
+				</div>
+
+
+
+			</form>
+
+		</field>
+	</record>
+
+
+	<record id="form_final_work_view_tree" model="ir.ui.view">
+		<field name="name">form.final_work.tree</field>
+		<field name="model">form.final_work</field>
+		<field name="arch" type="xml">
+
+			<tree>
+				<field name="name"/>
+				<field name="date_current"/>
+				<field name="project_id"/>
+				<field name="coordinator_id"/>
+				<field name="adviser_id"/>
+				<field name="partner_id"/>
+				<field name="sede_partner"/>
+				<field name="resident_id"/>
+			</tree>
+
+		</field>
+	</record>
+
+	<record id="form_final_work_action" model="ir.actions.act_window">
+		<field name="name">Entrega Obra</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">form.final_work</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+		  <p class="o_view_nocontent_smiling_face">
+			Crear una nueva Acta
+		  </p>
+		</field>
+	</record>
+
+
+
+</odoo>

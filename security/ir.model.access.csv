@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_form_one,form.one,model_form_one,,1,1,1,1
+access_form_attendees,form.attendees,model_form_attendees,,1,1,1,1
+access_form_commitment,form.commitment,model_form_commitment,,1,1,1,1
+access_res_country_state_city,access_res_country_state_city,model_res_country_state_city,,1,0,0,0
+access_form_final_work,form.final_work,model_form_final_work,,1,1,1,1
+access_form_subsystem,form.subsystem,model_form_subsystem,,1,1,1,1
